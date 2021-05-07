@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/async-mode/async-mode.iml" filepath="$PROJECT_DIR$/async-mode/async-mode.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/base.iml" filepath="$PROJECT_DIR$/.idea/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-parent/common-parent.iml" filepath="$PROJECT_DIR$/common-parent/common-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-practice/redis-practice.iml" filepath="$PROJECT_DIR$/redis-practice/redis-practice.iml" />
     </modules>
   </component>
 </project>

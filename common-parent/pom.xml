@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>../async-mode</module>
+        <module>../redis-practice</module>
     </modules>
     <groupId>org.example</groupId>
     <artifactId>common-parent</artifactId>
