@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenjing.mybatis.dao.UserMapper">
+    <insert id="saveUser" parameterType="com.wenjing.mybatis.entity.User" useGeneratedKeys="true">
+        insert into user values (#{id},#{name},#{age});
+    </insert>
+    <select id="findById" resultType="com.wenjing.mybatis.entity.User">
+        select * from user where id = #{uid}
+    </select>
+    <select id="findByUser" resultType="com.wenjing.mybatis.entity.User" parameterType="com.wenjing.mybatis.entity.User">
+        select * from user where 1 = 1
+        <if test="username != nuill and username !=''">
+            and username like #{username}
+        </if>
+        <if test="address != null">
+            and address like #{address}
+        </if>
+    </select>
+<!--    简化where 1 = 1的条件，使用标签<where>-->
+    <sql id="defaulstSql">select * from user</sql>
+    <select id="findByUser2" resultType="com.wenjing.mybatis.entity.User" parameterType="com.wenjing.mybatis.entity.User">
+        <include refid="defaulstSql"></include>
+        <where>
+            <if test="username != null useranme!=''">
+                and username like #{ussername}
+            </if>
+            <if test="address != null">
+                and address like #{address}
+            </if>
+        </where>
+    </select>
+</mapper>
